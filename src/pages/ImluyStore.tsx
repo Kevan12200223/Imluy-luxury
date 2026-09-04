@@ -60,14 +60,14 @@ export default function ImluyStore() {
               decades of expertise and an unwavering commitment to perfection.
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-6 text-center">
+          <div className="grid grid-cols-3 gap-4 sm:gap-6 text-center">
             {[
               { value: "47", label: "Artisans" },
               { value: "120+", label: "Hours per piece" },
               { value: "100%", label: "Natural fibres" },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="font-imluy-display text-3xl lg:text-4xl text-white/80 font-light mb-1">
+                <p className="font-imluy-display text-2xl sm:text-3xl lg:text-4xl text-white/80 font-light mb-1">
                   {stat.value}
                 </p>
                 <p className="text-[9px] tracking-[0.2em] uppercase text-white/30">

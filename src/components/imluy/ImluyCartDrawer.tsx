@@ -155,7 +155,7 @@ export default function ImluyCartDrawer({
 
             {/* Footer */}
             {items.length > 0 && (
-              <div className="border-t border-imluy-black/5 px-6 py-5 space-y-4">
+              <div className="border-t border-imluy-black/5 px-6 py-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-[11px] tracking-[0.15em] uppercase text-imluy-black/50">
                     Subtotal

@@ -11,7 +11,7 @@ export default function ImluyHero() {
   const [imgFailed, setImgFailed] = useState(false);
 
   return (
-    <section className="relative h-screen min-h-[600px] max-h-[1100px] w-full overflow-hidden bg-imluy-black">
+    <section className="relative h-[100dvh] min-h-[600px] max-h-[1100px] w-full overflow-hidden bg-imluy-black">
       {/* Background image with Ken Burns effect */}
       <motion.div
         initial={{ scale: 1.1 }}

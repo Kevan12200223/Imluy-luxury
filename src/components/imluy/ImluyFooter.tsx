@@ -20,17 +20,17 @@ export default function ImluyFooter() {
             </p>
           </div>
           <form
-            className="flex w-full max-w-md"
+            className="flex w-full max-w-md flex-col sm:flex-row"
             onSubmit={(e) => e.preventDefault()}
           >
             <input
               type="email"
               placeholder="Your email address"
-              className="flex-1 bg-transparent border border-white/15 border-r-0 px-5 py-3 text-[12px] tracking-wide text-white placeholder:text-white/25 focus:outline-none focus:border-white/30 transition-colors"
+              className="flex-1 bg-transparent border border-white/15 sm:border-r-0 px-5 py-3 text-[12px] tracking-wide text-white placeholder:text-white/25 focus:outline-none focus:border-white/30 transition-colors"
             />
             <button
               type="submit"
-              className="bg-white text-black px-6 py-3 text-[10px] font-semibold tracking-[0.2em] uppercase hover:bg-white/90 transition-colors"
+              className="bg-white text-black px-6 py-3 text-[10px] font-semibold tracking-[0.2em] uppercase hover:bg-white/90 transition-colors mt-2 sm:mt-0"
             >
               Subscribe
             </button>
@@ -119,7 +119,7 @@ export default function ImluyFooter() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/5">
-        <div className="mx-auto max-w-[1440px] px-6 py-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mx-auto max-w-[1440px] px-6 py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[10px] tracking-wider text-white/25">
             &copy; 2026 Imluy. All rights reserved.
           </p>

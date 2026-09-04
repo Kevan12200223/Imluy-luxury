@@ -54,10 +54,10 @@ export default function ImluyProductCard({ product, index, onSelect }: ImluyProd
           )}
         </div>
 
-        {/* Wishlist heart */}
+        {/* Wishlist heart — always visible on touch/mobile, hover on desktop */}
         <button
           onClick={(e) => { e.stopPropagation(); onToggleWishlist(product); }}
-          className="absolute top-3 right-3 z-10 p-2 bg-white/80 backdrop-blur-sm text-imluy-black/50 hover:text-imluy-black transition-all duration-300 opacity-0 group-hover:opacity-100"
+          className="absolute top-3 right-3 z-10 p-2 bg-white/80 backdrop-blur-sm text-imluy-black/50 hover:text-imluy-black transition-all duration-300 opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
           aria-label={wishlisted ? "Remove from wishlist" : "Add to wishlist"}
         >
           <Heart
@@ -79,12 +79,11 @@ export default function ImluyProductCard({ product, index, onSelect }: ImluyProd
           } ${imgLoaded ? "opacity-100" : "opacity-0"}`}
         />
 
-        {/* Quick-add overlay */}
+        {/* Quick-add overlay — always visible on touch/mobile */}
         <motion.div
           initial={false}
-          animate={{ opacity: hovered ? 1 : 0, y: hovered ? 0 : 10 }}
-          transition={{ duration: 0.3 }}
-          className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/30 to-transparent"
+          animate={{ opacity: 1, y: 0 }}
+          className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/30 to-transparent sm:opacity-0 sm:hover:opacity-100 transition-opacity duration-300"
         >
           <span className="block w-full text-center py-2.5 bg-white/95 backdrop-blur-sm text-[10px] tracking-[0.2em] uppercase font-medium text-imluy-black hover:bg-white transition-colors">
             Quick View

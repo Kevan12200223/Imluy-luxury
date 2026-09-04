@@ -397,4 +397,19 @@
     background-size: 200% 100%;
     animation: imluy-shimmer 1.5s ease-in-out infinite;
   }
+
+  /* iOS safe area utilities */
+  .imluy-safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .imluy-safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  /* Touch device: ensure hover-only elements are visible */
+  @media (hover: none) and (pointer: coarse) {
+    .hover-reveal-mobile {
+      opacity: 1 !important;
+    }
+  }
 }

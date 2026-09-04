@@ -47,8 +47,8 @@ export default function ImluySizeGuide({ isOpen, onClose }: ImluySizeGuideProps)
                 </p>
 
                 <p className="text-[10px] tracking-[0.2em] uppercase text-imluy-black/40 font-medium mb-3">Women's Ready-to-Wear</p>
-                <div className="border border-imluy-black/10">
-                  <table className="w-full text-[12px]">
+                <div className="border border-imluy-black/10 overflow-x-auto">
+                  <table className="w-full text-[12px] min-w-[360px]">
                     <thead>
                       <tr className="border-b border-imluy-black/10 bg-imluy-cream/50">
                         <th className="text-left px-4 py-2.5 font-medium text-imluy-black/60">Size</th>

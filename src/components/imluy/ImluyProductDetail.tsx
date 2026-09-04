@@ -44,15 +44,15 @@ export default function ImluyProductDetail({ product, relatedProducts, onClose, 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
+        className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-end sm:items-center justify-center"
         onClick={onClose}
       >
         <motion.div
-          initial={{ opacity: 0, scale: 0.96, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.96, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 40 }}
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto relative"
+          className="bg-white w-full sm:max-w-4xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto relative sm:rounded-none rounded-t-lg"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close button */}
@@ -66,7 +66,7 @@ export default function ImluyProductDetail({ product, relatedProducts, onClose, 
 
           <div className="grid md:grid-cols-2">
             {/* Image gallery */}
-            <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[500px] bg-imluy-cream">
+            <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[500px] bg-imluy-cream max-h-[50vh] md:max-h-none">
               <img
                 src={product.images[activeImage]}
                 alt={product.name}
@@ -109,7 +109,7 @@ export default function ImluyProductDetail({ product, relatedProducts, onClose, 
             </div>
 
             {/* Product info */}
-            <div className="p-8 lg:p-10 flex flex-col justify-center">
+            <div className="p-5 sm:p-8 lg:p-10 flex flex-col justify-center">
               <p className="text-[9px] tracking-[0.25em] uppercase text-imluy-black/40 font-medium mb-2">
                 {product.category}
               </p>
