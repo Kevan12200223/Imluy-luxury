@@ -58,7 +58,7 @@ export default function ImluyLayout({ children }: ImluyLayoutProps) {
 
   return (
     <ImluyContext.Provider value={contextValue}>
-      <div className="imluy-root min-h-screen bg-white text-imluy-black font-imluy-body selection:bg-imluy-black/10">
+      <div className="imluy-root min-h-screen bg-white text-imluy-black font-imluy-body selection:bg-imluy-black/10 overflow-x-hidden">
         <ImluyNav
           cartItemCount={cart.totalItems}
           wishlistCount={wishlist.count}

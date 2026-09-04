@@ -43,14 +43,14 @@ export default function ImluyNav({ cartItemCount, wishlistCount, onCartToggle, o
         {/* Promo banner — inside header so it stacks naturally */}
         {promoVisible && (
           <div className="bg-imluy-black text-white">
-            <div className="mx-auto max-w-[1440px] px-4 sm:px-6 py-1.5 flex items-center justify-center relative">
+            <div className="mx-auto max-w-[1440px] px-10 sm:px-12 lg:px-14 py-1.5 flex items-center justify-center relative">
               <p className="text-[8px] sm:text-[9px] tracking-[0.25em] uppercase font-medium text-white/80 text-center">
                 <span className="hidden sm:inline">Complimentary shipping on all orders &nbsp;·&nbsp; Free returns within 30 days</span>
                 <span className="sm:hidden">Free shipping & returns</span>
               </p>
               <button
                 onClick={() => setPromoVisible(false)}
-                className="absolute right-2 sm:right-4 p-1 text-white/40 hover:text-white/70 transition-colors"
+                className="absolute right-3 sm:right-5 p-1 text-white/40 hover:text-white/70 transition-colors"
                 aria-label="Dismiss banner"
               >
                 <X size={12} strokeWidth={1.5} />
@@ -59,12 +59,12 @@ export default function ImluyNav({ cartItemCount, wishlistCount, onCartToggle, o
           </div>
         )}
 
-        <nav className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-3.5 lg:px-12">
+        <nav className="mx-auto max-w-[1440px] grid grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-6 py-3.5 lg:px-12">
           {/* Left: Mobile toggle + Desktop nav links */}
-          <div className="flex items-center gap-4 flex-1">
+          <div className="flex items-center">
             <button
               onClick={() => setMobileOpen(true)}
-              className={`lg:hidden p-2 -ml-2 transition-colors duration-300 ${
+              className={`lg:hidden p-2 transition-colors duration-300 ${
                 scrolled ? "text-imluy-black" : "text-white"
               } hover:opacity-60`}
               aria-label="Open menu"
@@ -90,8 +90,8 @@ export default function ImluyNav({ cartItemCount, wishlistCount, onCartToggle, o
           </div>
 
           {/* Center: Brand mark */}
-          <a href="/imluy" className="flex-none">
-            <span className={`font-imluy-display text-[20px] tracking-[0.3em] uppercase font-light select-none whitespace-nowrap transition-colors duration-300 ${
+          <a href="/imluy" className="px-4 sm:px-6">
+            <span className={`font-imluy-display text-[18px] sm:text-[20px] tracking-[0.3em] uppercase font-light select-none whitespace-nowrap transition-colors duration-300 ${
               scrolled ? "text-imluy-black" : "text-white"
             }`}>
               Imluy
@@ -99,7 +99,7 @@ export default function ImluyNav({ cartItemCount, wishlistCount, onCartToggle, o
           </a>
 
           {/* Right: Actions */}
-          <div className="flex items-center gap-3 flex-1 justify-end">
+          <div className="flex items-center gap-1.5 sm:gap-3 justify-end">
             <button
               onClick={onSearchOpen}
               className={`p-1.5 transition-colors duration-300 ${
