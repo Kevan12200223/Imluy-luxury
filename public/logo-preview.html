@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NameWeaver Logo & Favicon Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 3rem;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #A855F7 0%, #EC4899 50%, #F97316 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: #64748b;
+            font-size: 1.125rem;
+            margin-bottom: 3rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .card {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(168, 85, 247, 0.15);
+            border-color: #A855F7;
+        }
+        
+        .card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+        
+        .card p {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+        
+        .icon-display {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .icon-display img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .logo-section {
+            background: linear-gradient(135deg, #A855F7 0%, #EC4899 50%, #F97316 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 100%);
+        }
+        
+        .logo-section h2 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo-icon {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo-icon img {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .logo-text {
+            color: white;
+            font-size: 3rem;
+            font-weight: 900;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .info-box {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .info-box h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+        
+        .info-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .info-box li {
+            color: #475569;
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .info-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .color-palette {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .color-swatch {
+            flex: 1;
+            height: 80px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-end;
+            padding: 0.75rem;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NameWeaver Logo & Favicon</h1>
+        <p class="subtitle">Premium gradient design • 2025 Edition</p>
+        
+        <!-- Main Logo Display -->
+        <div class="logo-section">
+            <h2>Official Brand Logo</h2>
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <img src="/favicon.svg" alt="NameWeaver Logo">
+                </div>
+                <div class="logo-text">NameWeaver</div>
+            </div>
+        </div>
+        
+        <!-- Favicon Previews -->
+        <h2 style="margin-bottom: 2rem; color: #1e293b; font-size: 1.5rem; font-weight: 700;">Favicon Sizes</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>16×16 px</h3>
+                <p>Browser tab icon</p>
+                <div class="icon-display">
+                    <img src="/favicon-16.png" alt="16x16 favicon" style="width: 16px; height: 16px;">
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>32×32 px</h3>
+                <p>Browser tab (Retina)</p>
+                <div class="icon-display">
+                    <img src="/favicon-32.png" alt="32x32 favicon" style="width: 32px; height: 32px;">
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>192×192 px</h3>
+                <p>Android home screen</p>
+                <div class="icon-display">
+                    <img src="/favicon-192.png" alt="192x192 favicon" style="width: 96px; height: 96px;">
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>512×512 px</h3>
+                <p>PWA & High-res displays</p>
+                <div class="icon-display">
+                    <img src="/favicon-512.png" alt="512x512 favicon" style="width: 96px; height: 96px;">
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>180×180 px</h3>
+                <p>iOS home screen icon</p>
+                <div class="icon-display">
+                    <img src="/apple-touch-icon.png" alt="Apple touch icon" style="width: 90px; height: 90px;">
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>SVG</h3>
+                <p>Scalable vector (modern browsers)</p>
+                <div class="icon-display">
+                    <img src="/favicon.svg" alt="SVG favicon" style="width: 96px; height: 96px;">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Color Palette -->
+        <h2 style="margin-bottom: 1.5rem; color: #1e293b; font-size: 1.5rem; font-weight: 700;">Brand Colors</h2>
+        <div class="color-palette">
+            <div class="color-swatch" style="background: #A855F7;">
+                Purple<br>#A855F7
+            </div>
+            <div class="color-swatch" style="background: #EC4899;">
+                Pink<br>#EC4899
+            </div>
+            <div class="color-swatch" style="background: #F97316;">
+                Orange<br>#F97316
+            </div>
+        </div>
+        
+        <!-- Technical Info -->
+        <div class="info-box">
+            <h3>✨ Logo Features</h3>
+            <ul>
+                <li>Premium gradient: Purple → Pink → Orange</li>
+                <li>Glass-morphic highlights for modern feel</li>
+                <li>Multi-layer glow effects</li>
+                <li>Optimized for all screen sizes (16px to 512px)</li>
+                <li>SVG format for crisp rendering</li>
+                <li>Matches new website design system</li>
+            </ul>
+        </div>
+        
+        <div class="info-box" style="margin-top: 1.5rem;">
+            <h3>📱 Platform Support</h3>
+            <ul>
+                <li>iOS: Rounded app icon (180×180)</li>
+                <li>Android: Adaptive icon (192×192, 512×512)</li>
+                <li>Windows: Tile color #A855F7</li>
+                <li>Desktop browsers: SVG + ICO fallback</li>
+                <li>PWA: Full manifest support</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

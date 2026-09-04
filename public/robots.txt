@@ -1,0 +1,77 @@
+
+# NameWeaver Robots.txt - Optimized for First-Page Google Rankings
+# Updated: 2025-10-21
+# Priority: Maximum crawl efficiency for search engines
+
+# Google Bot Configuration (Highest Priority)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.2
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing Bot Configuration  
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0.3
+
+# Yahoo Slurp Configuration
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo Bot Configuration
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 0.5
+
+# Social Media Bots (Full Access)
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+# All Other Bots
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Important Files and Directories
+Sitemap: https://nameweaver.com/sitemap.xml
+
+# Allow all static assets for proper rendering
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.svg$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+Allow: /*.eot$
+Allow: /*.otf$
+Allow: /*.json$
+Allow: /*.xml$
+
+# Disallow admin or private areas (if any exist in future)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /api/internal/
