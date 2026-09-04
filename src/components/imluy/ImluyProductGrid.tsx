@@ -54,14 +54,14 @@ export default function ImluyProductGrid({ products }: ImluyProductGridProps) {
         </motion.div>
 
         {/* Filters bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-12 border-b border-imluy-black/5 pb-8">
-          {/* Category tabs */}
-          <div className="flex items-center gap-1 overflow-x-auto scrollbar-none">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 mb-12 border-b border-imluy-black/5 pb-8">
+          {/* Category tabs — wrap naturally, centered */}
+          <div className="flex flex-wrap items-center justify-center gap-x-1 gap-y-2">
             {imluyCategories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 py-2 text-[10px] tracking-[0.15em] uppercase font-medium whitespace-nowrap transition-all duration-300 ${
+                className={`px-3 sm:px-4 py-2 text-[10px] tracking-[0.15em] uppercase font-medium whitespace-nowrap transition-all duration-300 ${
                   activeCategory === cat.id
                     ? "text-imluy-black border-b border-imluy-black"
                     : "text-imluy-black/40 hover:text-imluy-black/70"
@@ -76,7 +76,7 @@ export default function ImluyProductGrid({ products }: ImluyProductGridProps) {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-            className="bg-transparent border border-imluy-black/10 px-4 py-2 text-[10px] tracking-[0.15em] uppercase text-imluy-black/60 focus:outline-none focus:border-imluy-black/30 cursor-pointer"
+            className="bg-transparent border border-imluy-black/10 px-4 py-2 text-[10px] tracking-[0.15em] uppercase text-imluy-black/60 focus:outline-none focus:border-imluy-black/30 cursor-pointer flex-shrink-0"
           >
             <option value="featured">Featured</option>
             <option value="price-asc">Price: Low to High</option>
